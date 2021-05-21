@@ -11,18 +11,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all' %>
+   <!-- <%= stylesheet_link_tag 'application', media: 'all' %> -->
+
+  <link rel="stylesheet" href="/bootstrap.css">
+<!--  <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" type="text/css">
+  <style>
+    body{background-color: #D6D6CE; }
+    .navbar-link{color: white; }
+    a.navbar-brand{ color: white; text-decoration: none; }
+    a.nav-link{ color: white; text-decoration: none; border-radius:"25px"}
+    
+    ul.nav > li > a.nav-link:hover {
+    border-radius:5px;
+    background-color: #767676;
+    color: #D6D6CE;
+    }
+
+    ul.nav > li > a.navbar-brand:hover {
+    color: #D6D6CE;
+    }
+  </style>
+
+
 
   </head>
 
   <body>
-    <div>
-      <a href="/">Home</a>
-      <a href="/quick_reference">Quick Reference</a>
-      <a href="/user_backpack">Plan Your Schedule</a>
-      <a href="/about">About Bid Buddy</a>
-      <a href="/user_sign_in">Sign In</A>
-    </div>
+  <div style="padding:20px">
+    <ul class="nav" style="padding: 15px 10px; background-color: #800000; border-radius:7px">
+      <li class="nav-item">  
+        <a class="navbar-brand" href="/">
+          <img src="https://robohash.org/;laksjdflkasdjf" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          Bidding Buddy
+        </a>
+      </li>
+      <li class="nav-item">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/courses">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/professors">Professors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/<%=session.fetch(:user_id)%>">My Backpack</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item ms-auto">
+        <form class="form ms-auto" action="">
+          <input class="form-control ms-auto" type="search" placeholder="Search By Class #" aria-label="Search">
+        </form>
+      </li>
+    </ul>
+  </div>
+  <div style="padding: 0px 30px;">
+
     <%= yield %>
+  </div>
+  <nav class="navbar fixed-bottom" style="background-color: #800000; padding: 10px 10px 75px 0px">
+    <div style="padding: 25px; color: white">
+      <h1>Footer Text</h1>
+    </div>
+  <div>
   </body>
 </html>
