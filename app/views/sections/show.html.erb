@@ -1,0 +1,491 @@
+<div>
+  <div>
+    <h1>
+      Section #<%= @the_section.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/sections">
+          Go back
+        </a>
+      </div>
+
+      <div>
+        <a href="/delete_section/<%= @the_section.id %>">
+          Delete section
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Title
+      </dt>
+      <dd>
+        <%= @the_section.title %>
+      </dd>
+
+      <dt>
+        Quarter
+      </dt>
+      <dd>
+        <%= @the_section.quarter %>
+      </dd>
+
+      <dt>
+        Year
+      </dt>
+      <dd>
+        <%= @the_section.year %>
+      </dd>
+
+      <dt>
+        Day
+      </dt>
+      <dd>
+        <%= @the_section.day %>
+      </dd>
+
+      <dt>
+        Time
+      </dt>
+      <dd>
+        <%= @the_section.time %>
+      </dd>
+
+      <dt>
+        Instructor
+      </dt>
+      <dd>
+        <%= @the_section.instructor_id %>
+      </dd>
+
+      <dt>
+        Phase 1 enrollment
+      </dt>
+      <dd>
+        <%= @the_section.phase_1_enrollment %>
+      </dd>
+
+      <dt>
+        Phase 1 seats available
+      </dt>
+      <dd>
+        <%= @the_section.phase_1_seats_available %>
+      </dd>
+
+      <dt>
+        Phase 1 price
+      </dt>
+      <dd>
+        <%= @the_section.phase_1_price %>
+      </dd>
+
+      <dt>
+        Phase 2 enrollment
+      </dt>
+      <dd>
+        <%= @the_section.phase_2_enrollment %>
+      </dd>
+
+      <dt>
+        Phase 2 seats available
+      </dt>
+      <dd>
+        <%= @the_section.phase_2_seats_available %>
+      </dd>
+
+      <dt>
+        Phase 2 price
+      </dt>
+      <dd>
+        <%= @the_section.phase_2_price %>
+      </dd>
+
+      <dt>
+        Phase new1 enrollment
+      </dt>
+      <dd>
+        <%= @the_section.phase_new1_enrollment %>
+      </dd>
+
+      <dt>
+        Phase new1 seats available
+      </dt>
+      <dd>
+        <%= @the_section.phase_new1_seats_available %>
+      </dd>
+
+      <dt>
+        Phase new1 price
+      </dt>
+      <dd>
+        <%= @the_section.phase_new1_price %>
+      </dd>
+
+      <dt>
+        Phase new2 enrollment
+      </dt>
+      <dd>
+        <%= @the_section.phase_new2_enrollment %>
+      </dd>
+
+      <dt>
+        Phase new 2 seats available
+      </dt>
+      <dd>
+        <%= @the_section.phase_new_2_seats_available %>
+      </dd>
+
+      <dt>
+        Phase new2 price
+      </dt>
+      <dd>
+        <%= @the_section.phase_new2_price %>
+      </dd>
+
+      <dt>
+        Course
+      </dt>
+      <dd>
+        <%= @the_section.course_id %>
+      </dd>
+
+      <dt>
+        Section number
+      </dt>
+      <dd>
+        <%= @the_section.section_number %>
+      </dd>
+
+      <dt>
+        Phase 3 enrollment
+      </dt>
+      <dd>
+        <%= @the_section.phase_3_enrollment %>
+      </dd>
+
+      <dt>
+        Phase 3 seats available
+      </dt>
+      <dd>
+        <%= @the_section.phase_3_seats_available %>
+      </dd>
+
+      <dt>
+        Phase 3 price
+      </dt>
+      <dd>
+        <%= @the_section.phase_3_price %>
+      </dd>
+
+      <dt>
+        Phase 4 enrollment
+      </dt>
+      <dd>
+        <%= @the_section.phase_4_enrollment %>
+      </dd>
+
+      <dt>
+        Phase 4 seats available
+      </dt>
+      <dd>
+        <%= @the_section.phase_4_seats_available %>
+      </dd>
+
+      <dt>
+        Phase 4 price
+      </dt>
+      <dd>
+        <%= @the_section.phase_4_price %>
+      </dd>
+
+      <dt>
+        Total seats offered
+      </dt>
+      <dd>
+        <%= @the_section.total_seats_offered %>
+      </dd>
+
+      <dt>
+        Program
+      </dt>
+      <dd>
+        <%= @the_section.program %>
+      </dd>
+
+      <dt>
+        Backpacked sections count
+      </dt>
+      <dd>
+        <%= @the_section.backpacked_sections_count %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_section.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_section.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit section
+    </h2>
+
+    <form action="/modify_section/<%= @the_section.id %>"  method="post" >
+      <div>
+        <label for="title_box">
+          Title
+        </label>
+
+        <input type="text" id="title_box" name="query_title" value="<%= @the_section.title %>">
+      </div>
+
+      <div>
+        <label for="quarter_box">
+          Quarter
+        </label>
+
+        <input type="text" id="quarter_box" name="query_quarter" value="<%= @the_section.quarter %>">
+      </div>
+
+      <div>
+        <label for="year_box">
+          Year
+        </label>
+
+        <input type="text" id="year_box" name="query_year" value="<%= @the_section.year %>">
+      </div>
+
+      <div>
+        <label for="day_box">
+          Day
+        </label>
+
+        <input type="text" id="day_box" name="query_day" value="<%= @the_section.day %>">
+      </div>
+
+      <div>
+        <label for="time_box">
+          Time
+        </label>
+
+        <input type="text" id="time_box" name="query_time" value="<%= @the_section.time %>">
+      </div>
+
+      <div>
+        <label for="instructor_id_box">
+          Instructor
+        </label>
+
+        <input type="text" id="instructor_id_box" name="query_instructor_id" value="<%= @the_section.instructor_id %>">
+      </div>
+
+      <div>
+        <label for="phase_1_enrollment_box">
+          Phase 1 enrollment
+        </label>
+
+        <input type="text" id="phase_1_enrollment_box" name="query_phase_1_enrollment" value="<%= @the_section.phase_1_enrollment %>">
+      </div>
+
+      <div>
+        <label for="phase_1_seats_available_box">
+          Phase 1 seats available
+        </label>
+
+        <input type="text" id="phase_1_seats_available_box" name="query_phase_1_seats_available" value="<%= @the_section.phase_1_seats_available %>">
+      </div>
+
+      <div>
+        <label for="phase_1_price_box">
+          Phase 1 price
+        </label>
+
+        <input type="text" id="phase_1_price_box" name="query_phase_1_price" value="<%= @the_section.phase_1_price %>">
+      </div>
+
+      <div>
+        <label for="phase_2_enrollment_box">
+          Phase 2 enrollment
+        </label>
+
+        <input type="text" id="phase_2_enrollment_box" name="query_phase_2_enrollment" value="<%= @the_section.phase_2_enrollment %>">
+      </div>
+
+      <div>
+        <label for="phase_2_seats_available_box">
+          Phase 2 seats available
+        </label>
+
+        <input type="text" id="phase_2_seats_available_box" name="query_phase_2_seats_available" value="<%= @the_section.phase_2_seats_available %>">
+      </div>
+
+      <div>
+        <label for="phase_2_price_box">
+          Phase 2 price
+        </label>
+
+        <input type="text" id="phase_2_price_box" name="query_phase_2_price" value="<%= @the_section.phase_2_price %>">
+      </div>
+
+      <div>
+        <label for="phase_new1_enrollment_box">
+          Phase new1 enrollment
+        </label>
+
+        <input type="text" id="phase_new1_enrollment_box" name="query_phase_new1_enrollment" value="<%= @the_section.phase_new1_enrollment %>">
+      </div>
+
+      <div>
+        <label for="phase_new1_seats_available_box">
+          Phase new1 seats available
+        </label>
+
+        <input type="text" id="phase_new1_seats_available_box" name="query_phase_new1_seats_available" value="<%= @the_section.phase_new1_seats_available %>">
+      </div>
+
+      <div>
+        <label for="phase_new1_price_box">
+          Phase new1 price
+        </label>
+
+        <input type="text" id="phase_new1_price_box" name="query_phase_new1_price" value="<%= @the_section.phase_new1_price %>">
+      </div>
+
+      <div>
+        <label for="phase_new2_enrollment_box">
+          Phase new2 enrollment
+        </label>
+
+        <input type="text" id="phase_new2_enrollment_box" name="query_phase_new2_enrollment" value="<%= @the_section.phase_new2_enrollment %>">
+      </div>
+
+      <div>
+        <label for="phase_new_2_seats_available_box">
+          Phase new 2 seats available
+        </label>
+
+        <input type="text" id="phase_new_2_seats_available_box" name="query_phase_new_2_seats_available" value="<%= @the_section.phase_new_2_seats_available %>">
+      </div>
+
+      <div>
+        <label for="phase_new2_price_box">
+          Phase new2 price
+        </label>
+
+        <input type="text" id="phase_new2_price_box" name="query_phase_new2_price" value="<%= @the_section.phase_new2_price %>">
+      </div>
+
+      <div>
+        <label for="course_id_box">
+          Course
+        </label>
+
+        <input type="text" id="course_id_box" name="query_course_id" value="<%= @the_section.course_id %>">
+      </div>
+
+      <div>
+        <label for="section_number_box">
+          Section number
+        </label>
+
+        <input type="text" id="section_number_box" name="query_section_number" value="<%= @the_section.section_number %>">
+      </div>
+
+      <div>
+        <label for="phase_3_enrollment_box">
+          Phase 3 enrollment
+        </label>
+
+        <input type="text" id="phase_3_enrollment_box" name="query_phase_3_enrollment" value="<%= @the_section.phase_3_enrollment %>">
+      </div>
+
+      <div>
+        <label for="phase_3_seats_available_box">
+          Phase 3 seats available
+        </label>
+
+        <input type="text" id="phase_3_seats_available_box" name="query_phase_3_seats_available" value="<%= @the_section.phase_3_seats_available %>">
+      </div>
+
+      <div>
+        <label for="phase_3_price_box">
+          Phase 3 price
+        </label>
+
+        <input type="text" id="phase_3_price_box" name="query_phase_3_price" value="<%= @the_section.phase_3_price %>">
+      </div>
+
+      <div>
+        <label for="phase_4_enrollment_box">
+          Phase 4 enrollment
+        </label>
+
+        <input type="text" id="phase_4_enrollment_box" name="query_phase_4_enrollment" value="<%= @the_section.phase_4_enrollment %>">
+      </div>
+
+      <div>
+        <label for="phase_4_seats_available_box">
+          Phase 4 seats available
+        </label>
+
+        <input type="text" id="phase_4_seats_available_box" name="query_phase_4_seats_available" value="<%= @the_section.phase_4_seats_available %>">
+      </div>
+
+      <div>
+        <label for="phase_4_price_box">
+          Phase 4 price
+        </label>
+
+        <input type="text" id="phase_4_price_box" name="query_phase_4_price" value="<%= @the_section.phase_4_price %>">
+      </div>
+
+      <div>
+        <label for="total_seats_offered_box">
+          Total seats offered
+        </label>
+
+        <input type="text" id="total_seats_offered_box" name="query_total_seats_offered" value="<%= @the_section.total_seats_offered %>">
+      </div>
+
+      <div>
+        <label for="program_box">
+          Program
+        </label>
+
+        <input type="text" id="program_box" name="query_program" value="<%= @the_section.program %>">
+      </div>
+
+      <div>
+        <label for="backpacked_sections_count_box">
+          Backpacked sections count
+        </label>
+
+        <input type="text" id="backpacked_sections_count_box" name="query_backpacked_sections_count" value="<%= @the_section.backpacked_sections_count %>">
+      </div>
+
+      <button>
+        Update section
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
