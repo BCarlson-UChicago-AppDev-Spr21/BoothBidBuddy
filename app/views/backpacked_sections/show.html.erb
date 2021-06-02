@@ -1,0 +1,101 @@
+<div>
+  <div>
+    <h1>
+      Backpacked section #<%= @the_backpacked_section.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/backpacked_sections">
+          Go back
+        </a>
+      </div>
+
+      <div>
+        <a href="/delete_backpacked_section/<%= @the_backpacked_section.id %>">
+          Delete backpacked section
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        User
+      </dt>
+      <dd>
+        <%= @the_backpacked_section.user_id %>
+      </dd>
+
+      <dt>
+        Planned bid
+      </dt>
+      <dd>
+        <%= @the_backpacked_section.planned_bid %>
+      </dd>
+
+      <dt>
+        Section
+      </dt>
+      <dd>
+        <%= @the_backpacked_section.section_id %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_backpacked_section.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_backpacked_section.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit backpacked section
+    </h2>
+
+    <form action="/modify_backpacked_section/<%= @the_backpacked_section.id %>"  method="post" >
+      <div>
+        <label for="user_id_box">
+          User
+        </label>
+
+        <input type="text" id="user_id_box" name="query_user_id" value="<%= @the_backpacked_section.user_id %>">
+      </div>
+
+      <div>
+        <label for="planned_bid_box">
+          Planned bid
+        </label>
+
+        <input type="text" id="planned_bid_box" name="query_planned_bid" value="<%= @the_backpacked_section.planned_bid %>">
+      </div>
+
+      <div>
+        <label for="section_id_box">
+          Section
+        </label>
+
+        <input type="text" id="section_id_box" name="query_section_id" value="<%= @the_backpacked_section.section_id %>">
+      </div>
+
+      <button>
+        Update backpacked section
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>

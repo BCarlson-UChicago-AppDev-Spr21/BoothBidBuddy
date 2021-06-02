@@ -1,0 +1,118 @@
+<div>
+  <div>
+    <h1>
+      List of all backpacked sections
+    </h1>
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <div>
+    <h2>
+      Add a new backpacked section
+    </h2>
+
+    <form action="/insert_backpacked_section" method="post">
+      <div>
+        <label for="user_id_box">
+          User
+        </label>
+
+        <input type="text" id="user_id_box" name="query_user_id">
+      </div>
+
+      <div>
+        <label for="planned_bid_box">
+          Planned bid
+        </label>
+
+        <input type="text" id="planned_bid_box" name="query_planned_bid">
+      </div>
+
+      <div>
+        <label for="section_id_box">
+          Section
+        </label>
+
+        <input type="text" id="section_id_box" name="query_section_id">
+      </div>
+
+      <button>
+        Create backpacked section
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
+<div>
+  <div>
+    <table>
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          User
+        </th>
+
+        <th>
+          Planned bid
+        </th>
+
+        <th>
+          Section
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @list_of_backpacked_sections.each do |a_backpacked_section| %>
+      <tr>
+        <td>
+          <%= a_backpacked_section.id %>
+        </td>
+
+        <td>
+          <%= a_backpacked_section.user_id %>
+        </td>
+
+        <td>
+          <%= a_backpacked_section.planned_bid %>
+        </td>
+
+        <td>
+          <%= a_backpacked_section.section_id %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(a_backpacked_section.created_at) %> ago
+        </td>
+        <td>
+          <%= time_ago_in_words(a_backpacked_section.updated_at) %> ago
+        </td>
+
+        <td>
+          <a href="/backpacked_sections/<%= a_backpacked_section.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>
