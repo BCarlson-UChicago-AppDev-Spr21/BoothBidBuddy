@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_02_195500) do
+ActiveRecord::Schema.define(version: 2021_06_02_204349) do
 
   create_table "backpacked_sections", force: :cascade do |t|
     t.integer "user_id"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2021_06_02_195500) do
   end
 
   create_table "courses", force: :cascade do |t|
+    t.string "title"
     t.integer "course_comments_count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

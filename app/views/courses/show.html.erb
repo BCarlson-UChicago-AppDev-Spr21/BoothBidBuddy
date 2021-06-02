@@ -20,6 +20,13 @@
 
     <dl>
       <dt>
+        Title
+      </dt>
+      <dd>
+        <%= @the_course.title %>
+      </dd>
+
+      <dt>
         Course comments count
       </dt>
       <dd>
@@ -53,6 +60,14 @@
     </h2>
 
     <form action="/modify_course/<%= @the_course.id %>"  method="post" >
+      <div>
+        <label for="title_box">
+          Title
+        </label>
+
+        <input type="text" id="title_box" name="query_title" value="<%= @the_course.title %>">
+      </div>
+
       <div>
         <label for="course_comments_count_box">
           Course comments count

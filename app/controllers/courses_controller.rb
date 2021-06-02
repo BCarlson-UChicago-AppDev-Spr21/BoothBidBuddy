@@ -19,6 +19,7 @@ class CoursesController < ApplicationController
 
   def create
     the_course = Course.new
+    the_course.title = params.fetch("query_title")
     the_course.course_comments_count = params.fetch("query_course_comments_count")
 
     if the_course.valid?
@@ -33,6 +34,7 @@ class CoursesController < ApplicationController
     the_id = params.fetch("path_id")
     the_course = Course.where({ :id => the_id }).at(0)
 
+    the_course.title = params.fetch("query_title")
     the_course.course_comments_count = params.fetch("query_course_comments_count")
 
     if the_course.valid?
