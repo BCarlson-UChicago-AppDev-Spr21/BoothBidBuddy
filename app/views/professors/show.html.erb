@@ -1,21 +1,17 @@
 <div>
   <div>
     <h1>
-      Professor #<%= @the_professor.id %> details
+      <% prof_name = @the_professor.name.split(", ") %>
+      Professor <%= prof_name[0] %> details
     </h1>
 
     <div>
       <div>
-        <a href="/professors">
-          Go back
+        <a href="/professors" class="btn btn-dark" style="background-color: #800000 !important;">
+          Return to professors
         </a>
       </div>
 
-      <div>
-        <a href="/delete_professor/<%= @the_professor.id %>">
-          Delete professor
-        </a>
-      </div>
     </div>
 
     <dl>
@@ -23,14 +19,7 @@
         Name
       </dt>
       <dd>
-        <%= @the_professor.name %>
-      </dd>
-
-      <dt>
-        Sections count
-      </dt>
-      <dd>
-        <%= @the_professor.sections_count %>
+        <%= prof_name[1]  %> <%= prof_name[0]%>
       </dd>
 
       <dt>
@@ -52,35 +41,5 @@
 
 <hr>
 
-
-<div>
-  <div>
-    <h2>
-      Edit professor
-    </h2>
-
-    <form action="/modify_professor/<%= @the_professor.id %>"  method="post" >
-      <div>
-        <label for="name_box">
-          Name
-        </label>
-
-        <input type="text" id="name_box" name="query_name" value="<%= @the_professor.name %>">
-      </div>
-
-      <div>
-        <label for="sections_count_box">
-          Sections count
-        </label>
-
-        <input type="text" id="sections_count_box" name="query_sections_count" value="<%= @the_professor.sections_count %>">
-      </div>
-
-      <button>
-        Update professor
-      </button>
-    </form>
-  </div>
-</div>
 
 <hr>
