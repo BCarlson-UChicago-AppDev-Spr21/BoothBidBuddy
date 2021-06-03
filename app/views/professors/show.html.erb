@@ -1,18 +1,32 @@
 <div>
   <div>
-    <h1>
       <% prof_name = @the_professor.name.split(", ") %>
-      Professor <%= prof_name[0] %> details
-    </h1>
 
     <div>
       <div>
         <a href="/professors" class="btn btn-dark" style="background-color: #800000 !important;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+        </svg>
           Return to professors
         </a>
       </div>
 
     </div>
+  <div class="card-group" style="padding: 10px">
+    <div class="card text-center" style="width: 18rem; margin: 7 px; border-radius: 7px">
+      <div class="card-body">
+        <h5 class="card-title text-muted">Instructor</h5>
+        <h5 class="card-title"><%= prof_name[1] + prof_name[0] %></h5>
+      </div>
+    </div>
+    <div class="card text-center" style="width: 18rem; margin: 7 px; border-radius: 7px">
+      <div class="card-body">
+        <h5 class="card-title text-muted">Teaching Since</h5>
+        <h5 class="card-title"><%= @first_section.year  %></h5>
+      </div>
+    </div>
+  </div>
 
     <dl>
       <dt>
@@ -21,25 +35,147 @@
       <dd>
         <%= prof_name[1]  %> <%= prof_name[0]%>
       </dd>
-
-      <dt>
-        Created at
-      </dt>
-      <dd>
-        <%= time_ago_in_words(@the_professor.created_at) %> ago
-      </dd>
-
-      <dt>
-        Updated at
-      </dt>
-      <dd>
-        <%= time_ago_in_words(@the_professor.updated_at) %> ago
-      </dd>
     </dl>
   </div>
 </div>
 
 <hr>
-
-
 <hr>
+<h5>Previous sections</h5>
+
+<div>
+    <h2>
+      Sections
+    </h2>
+    <div>
+      <div>
+        <table class="table">
+          <tr>
+            <th scope="col">
+              Course
+            </th>
+            <th scope="col">
+              Quarter
+            </th>
+
+            <th scope="col">
+              Meeting Time
+            </th>
+
+            <th scope="col">
+              Phase 1 enrollment
+            </th>
+
+            <th scope="col">
+              Phase 1 price
+            </th>
+
+            <th scope="col">
+              Phase 2 enrollment
+            </th>
+
+            <th scope="col">
+              Phase 2 price
+            </th>
+
+            <th scope="col">
+              Phase 3 enrollment
+            </th>
+
+            <th scope="col">
+              Phase 3 price
+            </th>
+
+            <th scope="col">
+              Phase 4 enrollment
+            </th>
+
+            <th scope="col">
+              Phase 4 price
+            </th>
+
+            <th scope="col">
+              Total seats offered
+            </th>
+
+            <th scope="col">
+              Program
+            </th>
+
+          </tr>
+
+          <% @professor_sections.each do |a_section| %>
+          <tr>
+            <td>
+              <% the_course = Course.where({ :id => a_section.course_id})[0] %>
+              <%= the_course.title + " " + the_course.course_number.to_s() %>
+            </td>
+
+            <td>
+              <%= a_section.quarter + " " + a_section.year %>
+            </td>
+
+            <td>
+              <% day = a_section.day.split("")%>
+              <%= day[0]+day[1]+day[2]+ " " + a_section.time.split(" - ")[0] %>
+            </td>
+
+            <td>
+              <%= a_section.phase_1_enrollment %>
+            </td>
+
+            <td>
+              <%= a_section.phase_1_price %>
+            </td>
+
+            <td>
+              <%= a_section.phase_2_enrollment %>
+            </td>
+
+            <td>
+              <%= a_section.phase_2_price %>
+            </td>
+
+            <td>
+              <%= a_section.phase_3_enrollment %>
+            </td>
+
+            <td>
+              <%= a_section.phase_3_price %>
+            </td>
+
+            <td>
+              <% if a_section.phase_4_enrollment.present? %>
+                <%= a_section.phase_4_enrollment %>
+              <% else %>
+                N/A
+              <%end%>
+            </td>
+
+            <td>
+              <% if a_section.phase_4_price.present? %>
+                <%= a_section.phase_4_price %>
+              <% else %>
+                N/A
+              <%end%>
+            </td>
+
+            <td>
+              <%= a_section.total_seats_offered %>
+            </td>
+
+            <td>
+              <%= a_section.program %>
+            </td>
+
+            <td>
+              <a href="/courses/<%= the_course.id %>" class="btn btn-dark">
+                Course details
+              </a>
+            </td>
+          </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>

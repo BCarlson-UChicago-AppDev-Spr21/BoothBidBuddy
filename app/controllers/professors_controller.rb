@@ -13,6 +13,8 @@ class ProfessorsController < ApplicationController
     matching_professors = Professor.where({ :id => the_id })
 
     @the_professor = matching_professors.at(0)
+    @professor_sections = @the_professor.sections
+    @first_section = @professor_sections.order({ :id => :desc})[0]
 
     render({ :template => "professors/show.html.erb" })
   end

@@ -1,233 +1,242 @@
-<div>
-  <div>
-    <h1>
-      Course #<%= @the_course.course_number %> | <%=@the_course.title%>
-    </h1>
-
-    <%=@course_sections%>
-
-    <%=@course_sections%>
 
     <div>
       <div>
-        <a href="/courses" class="btn btn-dark" style="background-color: #800000 !important;">
-          Return to courses
-        </a>
-      </div>
-
-    <dl>
-      <dt>
-        Title
-      </dt>
-      <dd>
-        <%= @the_course.title %>
-      </dd>
-
-      <dt>
-        Course number
-      </dt>
-      <dd>
-        <%= @the_course.course_number %>
-      </dd>
-
-      <dt>
-        Course comments count
-      </dt>
-      <dd>
-        <%= @the_course.course_comments_count %>
-      </dd>
-
-      <dt>
-        Sections count
-      </dt>
-      <dd>
-        <%= @the_course.sections_count %>
-      </dd>
-    </dl>
-  </div>
-</div>
-
-<hr>
-<hr>
-
-<div>
-  <h2>
-    Sections
-
-    <%= Section.where({ :course_id => @the_course.id}).average(:phase_1_price) %>
-  </h2>
-  <div>
-    <div>
-      <table class="table">
-        <tr>
-          <th scope="col">
-            Quarter
-          </th>
-
-          <th scope="col">
-            Meeting Time
-          </th>
-
-          <th scope="col">
-            Instructor
-          </th>
-
-          <th scope="col">
-            Phase 1 enrollment
-          </th>
-
-          <th scope="col">
-            Phase 1 price
-          </th>
-
-          <th scope="col">
-            Phase 2 enrollment
-          </th>
-
-          <th scope="col">
-            Phase 2 price
-          </th>
-
-          <th scope="col">
-            Phase 3 enrollment
-          </th>
-
-          <th scope="col">
-            Phase 3 price
-          </th>
-
-          <th scope="col">
-            Phase 4 enrollment
-          </th>
-
-          <th scope="col">
-            Phase 4 price
-          </th>
-
-          <th scope="col">
-            Total seats offered
-          </th>
-
-          <th scope="col">
-            Program
-          </th>
-
-        </tr>
-
-        <tr>
-          <td colspan="3">
-          Average Across Sections
-          </td>
-
-          <td>
-            <%=Section.where({ :course_id => @the_course.id}).average(:phase_1_enrollment).round(2) %>
-          </td>
-
-          <td>
-            <%=Section.where({ :course_id => @the_course.id}).average(:phase_1_price).round(2) %>
-          </td>
-
-          <td>
-            <%=Section.where({ :course_id => @the_course.id}).average(:phase_2_enrollment).round(2) %>
-          </td>
-
-          <td>
-            <%=Section.where({ :course_id => @the_course.id}).average(:phase_2_price).round(2) %>
-          </td>
-
-          <td>
-            <%=Section.where({ :course_id => @the_course.id}).average(:phase_3_enrollment).round(2) %>
-          </td>
-
-          <td>
-            <%=Section.where({ :course_id => @the_course.id}).average(:phase_3_price).round(2) %>
-          </td>
-
-          <td>
-            <%=Section.where({ :course_id => @the_course.id}).average(:phase_4_enrollment).round(2) %>
-          </td>
-
-          <td>
-            <%=Section.where({ :course_id => @the_course.id}).average(:phase_4_price).round(2) %>
-          </td>
-
-          <td>
-            <%=Section.where({ :course_id => @the_course.id}).average(:total_seats_offered).round(2) %>
-          </td>
-
-          <td>
-          </td>
-
-        </tr>
-
-        <% @course_sections.each do |a_section| %>
-        <tr>
-
-          <td>
-            <%= a_section.quarter + " " + a_section.year %>
-          </td>
-
-          <td>
-            <% day = a_section.day.split("")%>
-            <%= day[0]+day[1]+day[2]+ " " + a_section.time.split(" - ")[0] %>
-          </td>
-
-          <td>
-            <%= Professor.where({ :id => a_section.instructor_id})[0].name %>
-          </td>
-
-          <td>
-            <%= a_section.phase_1_enrollment %>
-          </td>
-
-          <td>
-            <%= a_section.phase_1_price %>
-          </td>
-
-          <td>
-            <%= a_section.phase_2_enrollment %>
-          </td>
-
-          <td>
-            <%= a_section.phase_2_price %>
-          </td>
-
-          <td>
-            <%= a_section.phase_3_enrollment %>
-          </td>
-
-          <td>
-            <%= a_section.phase_3_price %>
-          </td>
-
-          <td>
-            <%= a_section.phase_4_enrollment %>
-          </td>
-
-          <td>
-            <%= a_section.phase_4_price %>
-          </td>
-
-          <td>
-            <%= a_section.total_seats_offered %>
-          </td>
-
-          <td>
-            <%= a_section.program %>
-          </td>
-
-        </tr>
-        <% end %>
-      </table>
+        <div>
+          <a href="/courses" class="btn btn-dark" style="background-color: #800000 !important;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg>
+            Return to courses
+          </a>
+        </div>
     </div>
   </div>
-</div>
+  <div class="card-group" style="padding: 10px">
+    <div class="card text-center" style="width: 18rem; margin: 5 px; border-radius: 7px">
+      <div class="card-body">
+        <h5 class="card-title text-muted">Course Title</h5>
+        <h5 class="card-title"><%= @the_course.title %></h5>
+      </div>
+    </div>
+    <div class="card text-center" style="width: 18rem; margin: 5 px; border-radius: 7px">
+      <div class="card-body">
+        <h5 class="card-title text-muted">Course Number</h5>
+        <h5 class="card-title"><%= @the_course.course_number %></h5>
+      </div>
+    </div>
+  </div>
 
-<hr>
-<hr>
 
-<div>
-  <h2>
-    Instructors
-  </h2>
-</div>
+  <hr>
+  <hr>
+
+  <div>
+    <h2>
+      Sections
+    </h2>
+    <div>
+      <div>
+        <table class="table">
+          <tr>
+            <th scope="col">
+              Quarter
+            </th>
+
+            <th scope="col">
+              Meeting Time
+            </th>
+
+            <th scope="col">
+              Instructor
+            </th>
+
+            <th scope="col">
+              Phase 1 enrollment
+            </th>
+
+            <th scope="col">
+              Phase 1 price
+            </th>
+
+            <th scope="col">
+              Phase 2 enrollment
+            </th>
+
+            <th scope="col">
+              Phase 2 price
+            </th>
+
+            <th scope="col">
+              Phase 3 enrollment
+            </th>
+
+            <th scope="col">
+              Phase 3 price
+            </th>
+
+            <th scope="col">
+              Phase 4 enrollment
+            </th>
+
+            <th scope="col">
+              Phase 4 price
+            </th>
+
+            <th scope="col">
+              Total seats offered
+            </th>
+
+            <th scope="col">
+              Program
+            </th>
+
+          </tr>
+
+          <tr>
+            <td colspan="3">
+            Average Across Sections
+            </td>
+
+            <td>
+              <%=Section.where({ :course_id => @the_course.id}).average(:phase_1_enrollment).round(2) %>
+            </td>
+
+            <td>
+              <%=Section.where({ :course_id => @the_course.id}).average(:phase_1_price).round(2) %>
+            </td>
+
+            <td>
+              <%=Section.where({ :course_id => @the_course.id}).average(:phase_2_enrollment).round(2) %>
+            </td>
+
+            <td>
+              <%=Section.where({ :course_id => @the_course.id}).average(:phase_2_price).round(2) %>
+            </td>
+
+            <td>
+              <%=Section.where({ :course_id => @the_course.id}).average(:phase_3_enrollment).round(2) %>
+            </td>
+
+            <td>
+              <%=Section.where({ :course_id => @the_course.id}).average(:phase_3_price).round(2) %>
+            </td>
+
+            <td>
+              <%=Section.where({ :course_id => @the_course.id}).average(:phase_4_enrollment).round(2) %>
+            </td>
+
+            <td>
+              <%=Section.where({ :course_id => @the_course.id}).average(:phase_4_price).round(2) %>
+            </td>
+
+            <td>
+              <%=Section.where({ :course_id => @the_course.id}).average(:total_seats_offered).round(2) %>
+            </td>
+
+            <td>
+            </td>
+
+
+          </tr>
+
+          <% @course_sections.each do |a_section| %>
+          <tr>
+
+            <td>
+              <%= a_section.quarter + " " + a_section.year %>
+            </td>
+
+            <td>
+              <% day = a_section.day.split("")%>
+              <%= day[0]+day[1]+day[2]+ " " + a_section.time.split(" - ")[0] %>
+            </td>
+
+            <td>
+              <%= Professor.where({ :id => a_section.instructor_id})[0].name %>
+            </td>
+
+            <td>
+              <%= a_section.phase_1_enrollment %>
+            </td>
+
+            <td>
+              <%= a_section.phase_1_price %>
+            </td>
+
+            <td>
+              <%= a_section.phase_2_enrollment %>
+            </td>
+
+            <td>
+              <%= a_section.phase_2_price %>
+            </td>
+
+            <td>
+              <%= a_section.phase_3_enrollment %>
+            </td>
+
+            <td>
+              <%= a_section.phase_3_price %>
+            </td>
+
+            <td>
+              <%= a_section.phase_4_enrollment %>
+            </td>
+
+            <td>
+              <%= a_section.phase_4_price %>
+            </td>
+
+            <td>
+              <%= a_section.total_seats_offered %>
+            </td>
+
+            <td>
+              <%= a_section.program %>
+            </td>
+
+          </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <hr>
+
+  <div class="container">
+    <h2>
+      Instructors
+    </h2>
+    <div>
+      <div>
+        <table class="table">
+          <tr>
+
+            <th scope="col">
+              Name
+            </th>
+
+            <th scope="col">
+            </th>
+          </tr>
+
+          <% @course_instructors.each do |a_professor| %>
+          <tr>
+
+            <td>
+              <%= a_professor.name %>
+            </td>
+
+            <td>
+              <a href="/professors/<%= a_professor.id %>" class="btn btn-dark">
+                Show details
+              </a>
+            </td>
+          </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>

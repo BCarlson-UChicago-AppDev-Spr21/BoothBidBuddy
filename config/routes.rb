@@ -1,21 +1,5 @@
 Rails.application.routes.draw do
 
-  # Routes for the Course resource:
-
-  # CREATE
-  post("/insert_course", { :controller => "courses", :action => "create" })
-          
-  # READ
-  get("/courses", { :controller => "courses", :action => "index" })
-  
-  get("/courses/:path_id", { :controller => "courses", :action => "show" })
-  
-  # UPDATE
-  
-  post("/modify_course/:path_id", { :controller => "courses", :action => "update" })
-  
-  # DELETE
-  get("/delete_course/:path_id", { :controller => "courses", :action => "destroy" })
 
   #------------------------------
 
@@ -81,14 +65,18 @@ Rails.application.routes.draw do
   # CREATE
   post("/insert_course", { :controller => "courses", :action => "create" })
           
-  # READ
-  get("/courses", { :controller => "courses", :action => "index" })
-  
-  get("/courses/:path_id", { :controller => "courses", :action => "show" })
+
 
   # Searches
 
   get("/courses/search/:course_num_query", { :controller => "courses", :action => "search_results"})
+
+  get("/courses/search", { :controller => "courses", :action => "index"})
+
+  # READ
+  get("/courses", { :controller => "courses", :action => "index" })
+  
+  get("/courses/:path_id", { :controller => "courses", :action => "show" })
   
   # UPDATE
   

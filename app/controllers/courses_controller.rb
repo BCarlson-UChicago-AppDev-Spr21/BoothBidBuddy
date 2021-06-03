@@ -7,6 +7,15 @@ class CoursesController < ApplicationController
     render({ :template => "courses/index.html.erb" })
   end
 
+  def search_results
+    search = params.fetch("navsearch_query")
+    @matching_courses = Course.where("course_number LIKE ? OR title LIKE ?", "%#{search}%", "%#{search}%").order({ :course_number => :asc })
+
+    render({ :template => "courses/course_search.html.erb" })
+
+    
+  end
+
   def show
     the_id = params.fetch("path_id")
 
@@ -14,8 +23,7 @@ class CoursesController < ApplicationController
 
     @the_course = matching_courses.at(0)
     @course_sections = @the_course.sections
-    @course_instructors = @the_course.instructors
-
+    @course_instructors = @the_course.instructors.distinct
     render({ :template => "courses/show.html.erb" })
   end
 
