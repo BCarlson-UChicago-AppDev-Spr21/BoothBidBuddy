@@ -45,8 +45,8 @@ class UserAuthenticationController < ApplicationController
     @user.last_name = params.fetch("query_last_name")
     @user.graduation_year = params.fetch("query_graduation_year")
     @user.bid_wealth = params.fetch("query_bid_wealth")
-    @user.backpacked_courses_count = params.fetch("query_backpacked_courses_count")
-    @user.course_comments_count = params.fetch("query_course_comments_count")
+    @user.backpacked_courses_count = 0
+    @user.course_comments_count = 0
 
     save_status = @user.save
 

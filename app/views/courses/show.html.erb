@@ -30,6 +30,10 @@
   <hr>
   <hr>
 
+
+
+
+
   <div>
     <h2>
       Sections
@@ -89,7 +93,12 @@
             <th scope="col">
               Program
             </th>
-
+            
+            <% if @current_user.present? %>
+            <th scope="col">
+              Bookmark
+            </th>
+            <% end %>
           </tr>
 
           <tr>
@@ -194,6 +203,24 @@
             <td>
               <%= a_section.program %>
             </td>
+            
+            <% if @current_user.present? %>
+              <td>
+                <% this_bookmark = BackpackedSection.where({ :user_id => "#{@current_user.id}", :section_id => "#{a_section.id}"}) %>
+                <% if this_bookmark.count() > 0 %>
+                <a class="btn btn-dark" href="/delete_backpacked_section/<%=this_bookmark[0].id%>">Remove from Backpack</a>
+                
+
+                <% else %>
+                  <form action="/insert_backpacked_section" method="post">
+                    <input type="hidden" id="query_user_id" name="query_user_id" value=<%= @current_user.id %>>
+                    <input type="hidden" id="query_planned_bid" name="query_planned_bid" value=0>
+                    <input type="hidden" id="query_section_id" name="query_section_id" value="<%= a_section.id %>">
+                    <button class="btn btn-dark">Backpack Course</button>
+                  </form>
+                <% end %>
+              </td>
+            <% end %>
 
           </tr>
           <% end %>
@@ -201,6 +228,105 @@
       </div>
     </div>
   </div>
+
+  <hr>
+  <hr>
+
+  <div>
+    <h2>
+      Comments
+    </h2>
+
+    <% if @list_of_comments.count > 0 %>
+
+      <div>
+        <table class="table table-light" style="border-radius: 7px">
+          <tr>
+            <th scope="col">
+              Comment
+            </th>
+
+
+            <th scope="col">
+              Professor
+            </th>
+
+            <th scope="col">
+              Created at
+            </th>
+
+          </tr>
+
+          <% @list_of_comments.each do |a_comment| %>
+          <tr>
+            <td>
+              <%= a_comment.comment %>
+            </td>
+
+            <td>
+              <% if a_comment.professor_id == nil %>
+                N/A
+              <% else %>
+                <%= Professor.where({ :id => a_comment.professor_id})[0].name %>
+              <% end %>
+            </td>
+
+            <td>
+              <%= time_ago_in_words(a_comment.created_at) %> ago
+            </td>
+          </tr>
+          <% end %>
+        </table>
+      </div>
+    <% else %>
+      <div style="padding: 15px">
+        <h3>Be the first to comment on this course!</h3>
+      </div>
+    <% end %>
+  <div>
+    <h3>
+      Add a new comment
+    </h3>
+
+  <% if @current_user.present?%>
+
+    <form action="/insert_comment" method="post">
+      <div>
+        <input type="hidden" id="user_id_box" name="query_user_id" value="<%= @current_user.id %>">
+      </div>
+
+      <div class="form-floating">
+        <textarea id="comment_box" name="query_comment" rows="3" class="form-control"></textarea>
+        <label for="comment_box">
+          Comment here!
+        </label>
+      </div>
+
+      <div>
+        <input type="hidden" id="course_id_box" name="query_course_id" value="<%= @the_course.id %>">
+      </div>
+
+      <div>
+        <select class="form-select" id="professor_id_box" aria-label="professor_id_box" name="query_professor_id">
+          <option selected value=nil>Choose Professor</option>
+          <% @course_instructors.each do |a_professor| %>
+            <option value="<%=a_professor.id%>"><%= a_professor.name %></option>
+          <% end %>
+        </select>
+      </div>
+
+
+      <button class="btn btn-dark"style="padding: 10px; margin: 10px">
+        Create comment
+      </button>
+    </form>
+  </div>
+</div>
+  </div>
+<% else %>
+  <h2><a class="btn btn-dark">Sign in to leave a comment</a></h2>
+<% end %>
+
 
   <hr>
   <hr>

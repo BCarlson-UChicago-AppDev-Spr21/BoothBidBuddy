@@ -6,9 +6,21 @@
   </div>
 </div>
 
+<div class="container">
+  <form class="form-inline" action="/courses/search/<%=:navsearch_query%>">
+    <div class="form-group mb-2">
+      <label for="search_all_courses">Search All Courses</label>
+    </div>
+    <div class="forms-group mx-sm-3 mb-2">
+      <input type="search" placeholder="Course Search" aria-label="Search" id="search_all_courses" name="navsearch_query" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-dark mb-2">Search</button>
+  </form>
+</div>
+
 <hr>
 
-
+<% if @matching_courses.count() > 0 %>
 <hr>
 <div>
   <div>
@@ -50,5 +62,9 @@
     </table>
   </div>
 </div>
+
+<% else %>
+<h2> No courses found, Sorry </h2>
+<% end %>
 
 <hr>

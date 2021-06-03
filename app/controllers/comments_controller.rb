@@ -22,13 +22,17 @@ class CommentsController < ApplicationController
     the_comment.user_id = params.fetch("query_user_id")
     the_comment.comment = params.fetch("query_comment")
     the_comment.course_id = params.fetch("query_course_id")
-    the_comment.professor_id = params.fetch("query_professor_id")
+    if params.fetch("query_professor_id") == 'nil'
+    
+    else
+      the_comment.professor_id = params.fetch("query_professor_id")
+    end
 
     if the_comment.valid?
       the_comment.save
-      redirect_to("/comments", { :notice => "Comment created successfully." })
+      redirect_to("/courses/#{params.fetch("query_course_id")}", { :notice => "Comment created successfully." })
     else
-      redirect_to("/comments", { :notice => "Comment failed to create successfully." })
+      redirect_to("/courses/#{params.fetch("query_course_id")}", { :notice => "Comment failed to create successfully." })
     end
   end
 

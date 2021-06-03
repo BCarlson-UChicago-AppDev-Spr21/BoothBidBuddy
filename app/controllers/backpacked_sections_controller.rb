@@ -1,4 +1,5 @@
 class BackpackedSectionsController < ApplicationController
+  before_action(:force_user_sign_in)
   def index
     matching_backpacked_sections = BackpackedSection.all
 
@@ -25,7 +26,8 @@ class BackpackedSectionsController < ApplicationController
 
     if the_backpacked_section.valid?
       the_backpacked_section.save
-      redirect_to("/backpacked_sections", { :notice => "Backpacked section created successfully." })
+      current_section = Section.where({ :id => the_backpacked_section.section_id })[0]
+      redirect_to("/courses/#{current_section.course_id}", { :notice => "Backpacked section created successfully." })
     else
       redirect_to("/backpacked_sections", { :notice => "Backpacked section failed to create successfully." })
     end
@@ -41,18 +43,19 @@ class BackpackedSectionsController < ApplicationController
 
     if the_backpacked_section.valid?
       the_backpacked_section.save
-      redirect_to("/backpacked_sections/#{the_backpacked_section.id}", { :notice => "Backpacked section updated successfully."} )
+      redirect_to("/backpacked_sections", { :notice => "Backpacked section updated successfully."} )
     else
-      redirect_to("/backpacked_sections/#{the_backpacked_section.id}", { :alert => "Backpacked section failed to update successfully." })
+      redirect_to("/backpacked_sections", { :alert => "Backpacked section failed to update successfully." })
     end
   end
 
   def destroy
     the_id = params.fetch("path_id")
     the_backpacked_section = BackpackedSection.where({ :id => the_id }).at(0)
+    current_section = Section.where({ :id => the_backpacked_section.section_id })[0]
 
     the_backpacked_section.destroy
 
-    redirect_to("/backpacked_sections", { :notice => "Backpacked section deleted successfully."} )
+    redirect_to("/courses/#{current_section.course_id}", { :notice => "Backpacked section deleted successfully."} )
   end
 end

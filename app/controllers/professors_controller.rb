@@ -7,6 +7,16 @@ class ProfessorsController < ApplicationController
     render({ :template => "professors/index.html.erb" })
   end
 
+  def search_professors
+    search = params.fetch("prof_query")
+    matching_professors = Professor.where("name LIKE ?", "%#{search}%")
+
+    @list_of_professors = matching_professors.order({ :created_at => :desc })
+
+    render({ :template => "professors/professor_search.html.erb" })
+
+  end
+
   def show
     the_id = params.fetch("path_id")
 

@@ -24,6 +24,7 @@ class CoursesController < ApplicationController
     @the_course = matching_courses.at(0)
     @course_sections = @the_course.sections
     @course_instructors = @the_course.instructors.distinct
+    @list_of_comments = @the_course.course_comments
     render({ :template => "courses/show.html.erb" })
   end
 

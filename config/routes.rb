@@ -48,6 +48,7 @@ Rails.application.routes.draw do
           
   # READ
   get("/backpacked_sections", { :controller => "backpacked_sections", :action => "index" })
+  post("/backpacked_sections", { :controller => "backpacked_sections", :action => "index" })
   
   get("/backpacked_sections/:path_id", { :controller => "backpacked_sections", :action => "show" })
   
@@ -94,6 +95,8 @@ Rails.application.routes.draw do
           
   # READ
   get("/professors", { :controller => "professors", :action => "index" })
+
+  get("/professors/search/:navsearch_query", { :controller => "professors", :action => "search_professors"})
   
   get("/professors/:path_id", { :controller => "professors", :action => "show" })
   

@@ -6,95 +6,93 @@
   </div>
 </div>
 
-<hr>
-
-<div>
-  <div>
-    <h2>
-      Add a new backpacked section
-    </h2>
-
-    <form action="/insert_backpacked_section" method="post">
-      <div>
-        <label for="user_id_box">
-          User
-        </label>
-
-        <input type="text" id="user_id_box" name="query_user_id">
+  <div class="card-group" style="padding: 10px">
+    <div class="card text-center" style="width: 18rem; margin: 7 px; border-radius: 7px">
+      <div class="card-body">
+        <h5 class="card-title text-muted">Total Bid Wealth</h5>
+        <h5 class="card-title"><%= @current_user.bid_wealth %></h5>
       </div>
-
-      <div>
-        <label for="planned_bid_box">
-          Planned bid
-        </label>
-
-        <input type="text" id="planned_bid_box" name="query_planned_bid">
+    </div>
+    <div class="card text-center" style="width: 18rem; margin: 7 px; border-radius: 7px">
+      <div class="card-body">
+        <h5 class="card-title text-muted">Planned Bids</h5>
+        <% planned_bid_total = BackpackedSection.where({ :user_id => @current_user.id}).sum(:planned_bid) %>
+        <h5 class="card-title"><%= planned_bid_total %></h5>
       </div>
-
-      <div>
-        <label for="section_id_box">
-          Section
-        </label>
-
-        <input type="text" id="section_id_box" name="query_section_id">
+    </div>
+    <div class="card text-center" style="width: 18rem; margin: 7 px; border-radius: 7px">
+      <div class="card-body">
+        <h5 class="card-title text-muted">Bid Points Remaining</h5>
+        <h5 class="card-title"><%= @current_user.bid_wealth - planned_bid_total %></h5>
       </div>
-
-      <button>
-        Create backpacked section
-      </button>
-    </form>
+    </div>
   </div>
-</div>
 
+<hr>
 <hr>
 <div>
   <div>
-    <table>
+    <table class="table">
       <tr>
-        <th>
-          ID
+        <th scope="col">
+          Course Name
         </th>
 
-        <th>
-          User
+        <th scope="col">
+          Section
         </th>
-
-        <th>
+        
+        <th scope="col">
+          Course Quarter
+        </th>
+          Time
+        <th scope="col">
+        </th>
+        <th scope="col">
           Planned bid
         </th>
 
-        <th>
-          Section
-        </th>
-
-        <th>
+        <th scope="col">
           Created at
         </th>
 
-        <th>
+        <th scope="col">
           Updated at
         </th>
 
-        <th>
+        <th scope="col">
+          Remove Section
         </th>
       </tr>
 
       <% @list_of_backpacked_sections.each do |a_backpacked_section| %>
+      <% section = Section.where({ :id => a_backpacked_section.section_id})[0] %>
       <tr>
         <td>
-          <%= a_backpacked_section.id %>
-        </td>
-
-        <td>
-          <%= a_backpacked_section.user_id %>
-        </td>
-
-        <td>
-          <%= a_backpacked_section.planned_bid %>
+          <%= section.title %>
         </td>
 
         <td>
           <%= a_backpacked_section.section_id %>
+        </td>
+
+        <td>
+          <%= section.quarter + " " + section.year %>
+        <td>
+
+        <td>
+            <div>
+              <form action="/modify_backpacked_section/<%=a_backpacked_section.id%>" method="post">
+              <div>
+                <input type="hidden" id="query_user_id" name="query_user_id" value=<%= @current_user.id %>>
+                <input type="text" id="planned_bid_box" name="query_planned_bid" value=<%= a_backpacked_section.planned_bid %>>
+                <input type="hidden" id="section_id_box" name="query_section_id" value=<%= a_backpacked_section.section_id%>>
+                <button class="btn btn-dark">
+                  Update Bid
+                </button>
+              </div>
+              </form>
+            </div>
         </td>
 
         <td>
@@ -103,11 +101,8 @@
         <td>
           <%= time_ago_in_words(a_backpacked_section.updated_at) %> ago
         </td>
-
         <td>
-          <a href="/backpacked_sections/<%= a_backpacked_section.id %>">
-            Show details
-          </a>
+          <a class="btn btn-dark" href="/delete_backpacked_section/<%=a_backpacked_section.id%>">Remove from Backpack</a>
         </td>
       </tr>
       <% end %>
