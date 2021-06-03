@@ -2,7 +2,7 @@ class SectionsController < ApplicationController
   def index
     matching_sections = Section.all
 
-    @list_of_sections = matching_sections.order({ :created_at => :desc })
+    @list_of_sections = matching_sections.order({ :created_at => :asc })
 
     render({ :template => "sections/index.html.erb" })
   end

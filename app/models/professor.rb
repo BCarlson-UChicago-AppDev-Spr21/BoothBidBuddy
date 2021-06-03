@@ -14,4 +14,6 @@ class Professor < ApplicationRecord
 
   has_many(:sections, { :class_name => "Section", :foreign_key => "instructor_id", :dependent => :destroy })
 
+  has_many(:courses, { :through => :sections, :source => :course })
+
 end

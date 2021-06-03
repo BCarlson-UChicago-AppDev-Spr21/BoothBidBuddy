@@ -116,6 +116,7 @@ GEM
       safe_yaml (~> 1.0.0)
     crass (1.0.6)
     debug_inspector (0.0.3)
+    descriptive_statistics (2.5.1)
     devise (4.7.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -361,6 +362,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara
+  descriptive_statistics (~> 2.5)
   dotenv-rails
   draft_generators!
   factory_bot_rails

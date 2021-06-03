@@ -2,7 +2,7 @@ class CoursesController < ApplicationController
   def index
     matching_courses = Course.all
 
-    @list_of_courses = matching_courses.order({ :created_at => :desc })
+    @list_of_courses = matching_courses.order({ :course_number => :asc })
 
     render({ :template => "courses/index.html.erb" })
   end
@@ -13,6 +13,8 @@ class CoursesController < ApplicationController
     matching_courses = Course.where({ :id => the_id })
 
     @the_course = matching_courses.at(0)
+    @course_sections = @the_course.sections
+    @course_instructors = @the_course.instructors
 
     render({ :template => "courses/show.html.erb" })
   end
@@ -20,7 +22,9 @@ class CoursesController < ApplicationController
   def create
     the_course = Course.new
     the_course.title = params.fetch("query_title")
+    the_course.course_number = params.fetch("query_course_number")
     the_course.course_comments_count = params.fetch("query_course_comments_count")
+    the_course.sections_count = params.fetch("query_sections_count")
 
     if the_course.valid?
       the_course.save
@@ -35,7 +39,9 @@ class CoursesController < ApplicationController
     the_course = Course.where({ :id => the_id }).at(0)
 
     the_course.title = params.fetch("query_title")
+    the_course.course_number = params.fetch("query_course_number")
     the_course.course_comments_count = params.fetch("query_course_comments_count")
+    the_course.sections_count = params.fetch("query_sections_count")
 
     if the_course.valid?
       the_course.save

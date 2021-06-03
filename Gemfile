@@ -52,3 +52,5 @@ end
 group :production do
   gem 'pg'
 end
+
+gem "descriptive_statistics", "~> 2.5"

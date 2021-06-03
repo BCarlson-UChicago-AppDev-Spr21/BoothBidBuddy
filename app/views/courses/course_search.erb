@@ -1,12 +1,13 @@
 <div>
   <div>
     <h1>
-      List of all courses
+      Course Search
     </h1>
   </div>
 </div>
 
 <hr>
+
 
 <hr>
 <div>
@@ -27,7 +28,7 @@
         </tr>
       </thead>
       <tbody>
-        <% @list_of_courses.each do |a_course| %>
+        <% @matching_courses.each do |a_course| %>
         <tr>
           <th scope="row">
             <%= a_course.course_number %>
@@ -48,6 +49,5 @@
     </table>
   </div>
 </div>
-
 
 <hr>

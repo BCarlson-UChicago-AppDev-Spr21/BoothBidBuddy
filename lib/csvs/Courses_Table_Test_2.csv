@@ -1,219 +1,219 @@
-﻿id,title
-30000,Financial Accounting
-30001,Cost Analysis and Internal Controls
-30118,Taxes and Business Strategy
-30120,"Accounting, Economic, and Regulatory Issues in Complex Deals "
-30121,Accounting for Entrepreneurship: From Start-Up through IPO
-30130,Financial Statement Analysis
-30600,Workshop in Accounting Research
-30902,Empirical Research in Accounting
-31402,Leadership Practicum
-31403,Leadership Studio
-32100,Data Analysis with R and Python
-33001,Microeconomics
-33002,Accelerated Microeconomics
-33032,Managing the Workplace
-33040,Macroeconomics
-33222,Sports Analytics
-33305,The Firm and the Non-Market Environment
-33314,Big Problems
-33403,Advanced Macroeconomics
-33451,Real Estate Investments II
-33471,"Business, Politics, and Ethics"
-33502,International Financial Policy
-33610,Applied Economics Workshop
-33650,Workshop in Macro and International Economics
-33701,Energy Policy Practicum
-33905,Microeconomics Reading and Research Seminar ⑤
-33923,Advanced Industrial Organization III
-33948,Financial Markets in the Macroeconomy
-34101,Entrepreneurial Finance and Private Equity
-34102,New Venture Strategy
-34106,Commercializing Innovation: Tools to Research and Analyze Private Enterprises
-34111,Entrepreneurial Selling
-34206,"Women As CEOs, Entrepreneurs, Investors, Executives & Directors "
-35000,Investments
-35120,Portfolio Management
-35121,Behavioral Finance
-35123,The FinTech Revolution
-35130,Fixed Income Asset Pricing
-35200,Corporation Finance
-35201,Cases in Financial Management
-35202,Financial Markets and Institutions
-35213,Emerging Markets Finance and Entrepreneurship
-35219,Chinese Economy and Financial Markets
-35600,Seminar: Finance
-35601,Applied Theory Workshop
-35901,Portfolio Choice and Asset Pricing 
-35906,Behavioral Finance
-35916,New Developments in Public Finance
-35932,Research Seminar
-36106,Managerial Decision Modeling
-36109,Advanced Decision Models with Python
-36110,Application Development
-36111,Application Development II
-36600,Workshop in Operations/Management Science
-36902,Dynamic Programming/Markov Decision Processes
-36913,Online Optimization
-37000,Marketing Strategy
-37101,Consumer Behavior
-37103,Data-Driven Marketing
-37202,Pricing Strategies
-37601,Marketing Workshop
-37903,Adv Mktg Theory: Behavioral Science Approach
-37905,Marketing Literature Seminar
-37907,Behavioral Science Research Methods in Marketing
-38001,Managing in Organizations
-38002,Managerial Decision Making
-38003,Power and Influence in Organizations
-38102,Persuasion II: Influence Through Narrative ⑤
-38103,Strategies and Processes of Negotiation
-38105,Advanced Negotiations
-38601,Workshop in Behavioral Science
-38918,Behavioral Economics - Theory & the Lab
-38919,Psychology and Social Inequities
-39001,Strategy and Structure: Markets and Organizations
-40000,Operations Management: Business Process Fundamentals
-40108,Revenue Management
-41000,Business Statistics
-41100,Applied Regression Analysis
-41201,Big Data
-41202,Analysis of Financial Time Series
-41600,Econometrics and Statistics Colloquium
-41903,Applied Econometrics
-41914,Multivariate Time Series Analysis
-42001,Competitive Strategy
-42003,Literature and Strategic Leadership ⑤
-42004,Literature and Strategic Leadership II ⑤
-42116,Game Theory
-42117,Platform Competition ⑤
-42124,Storytelling and Narratives in Business
-42714,Integrated Strategic Management Lab
-30116,Accounting and Financial Analysis 
-30131,Advanced Financial Analysis and Valuation for Global Firms
-30901,Economic Modeling of Accounting Issues
-30903,Topics in Empirical Accounting Research
-32200,Artificial Intelligence
-33112,Business in Historical Perspective
-33401,Money and Banking
-33450,Real Estate Investments I
-33503,Managing the Firm in the Global Economy
-33904,Microeconomics Reading and Research Seminar ⑤
-33916,Consensus and Economics
-33917,Applied Microeconomics in Economic History
-33922,Advanced Industrial Organization II
-33949,Applied Macroeconomics: Heterogeneity and Macro
-34103,Building the New Venture
-34113,Impact Investing
-34117,Social Entrepreneurship and Innovation
-34302,Entrepreneurship through Acquisition
-34306,Entrepreneurship through Intellectual Property
-34902,Asset Pricing II
-34904,Corporate Finance II
-35101,"Futures, Forwards, Options & Swaps: Theory and Practice"
-35126,Quantitative Portfolio Management
-35210,International Corporate Finance
-35214,"Debt, Distress, and Restructuring"
-35215,Behavioral and Institutional Finance
-35931,Research Seminar
-36903,Convex Optimization
-36912,Stochastic Optimization
-36914,Queueing Theory
-36917,Networks and Markets
-37107,Experimental Marketing
-37200,New Products and Services
-37304,Digital and Algorithmic Marketing
-37902,Foundations of Advanced Quantitative Marketing
-37904,Advanced Quantitative Marketing
-37906,Applied Bayesian Econometrics
-38101,Persuasion: Effective Business Communication ⑤
-38119,Designing a Good Life
-38120,The Study of Behavioral Economics
-38122,Diversity in Organizations
-38913,Foundations of Judgment and Decision Making
-38917,Topics in Behavioral Economics
-39002,Strategic Leadership in Management Networks
-39101,Technology Strategy
-40101,Supply Chain Strategy and Practice
-40110,Managing Service Operations
-40205,Healthcare Data Analytics
-40910,Supply Chain Foundations & Theory ⑤
-41204,Machine Learning
-41902,Statistical Inference
-42108,Corporate Governance
-42121,Merger & Acquisition Strategy
-42125,Social Sector Strategy and Structure
-42300,Global Health and Social Policy
-33101,Advanced Microeconomic Analysis
-33310,Employment Law for Entrepreneurs and Managers
-33501,International Commercial Policy
-33520,The Wealth of Nations
-33903,Microeconomics Reading and Research Seminar ⑤
-33914,Topics in Information Economics
-33921,Advanced Industrial Organization I
-33946,International Macroeconomics and Trade
-34305,Private Equity Transactions ⑤
-34705,Entrepreneurial Discovery
-34901,Asset Pricing I
-34903,Corporate Finance I
-35001,Introductory Finance
-35100,Financial Instruments
-35930,Research Seminar
-36900,Linear Programming
-36906,Stochastic Processes
-37105,Data Science for Marketing Decision Making
-37301,Digital Marketing 
-37909,Cognitive Underpinnings of Decisions
-38115,Ethics of Business
-38116,Leading and Managing Teams
-38901,Current Topics in Behavioral Science I
-38916,Behavioral Economics - Development & Observational Data
-40911,Queueing Models for Service Operations Management ⑤
-41203,Financial Econometrics
-41301,"Statistical Insight into Marketing, Consulting, and Entrepreneurship"
-41901,Probability and Statistics
-41910,Time-series Analysis for Forecasting and Model Building
-41916,"Bayes, AI and Deep Learning "
-42123,"Reputation, Regulation and Communications – How Media Influences Business"
-42126,Arts Leadership: Exemplary is Not Enough ⑤
-42201,The Legal Infrastructure of Business
-42705,"Reputation, Regulation and Communications – How Media Influences Business - Lab"
-33113,History of Economic Ideas ⑤
-33301,"Management, Unions, and Collective Bargaining"
-35131,Cases in Financial Risk Management
-40111,Project Management
-33915,Market Design
-34205,Life Sciences: Innovation and Finance
-34207,New Venture Tech ⑤
-36911,Networks: Introduction to Modeling and Analysis
-36916,Dynamic Control of Stochastic Networks
-39600,Workshop in Organizations and Markets
-41912,Applied Multivariate Analysis
-42704,Integrated Strategic Management ⑤
-30906,Contracting on Accounting Information
-32901,Applications of Machine Learning to the Empirical Sciences
-34108,Innovation Leadership
-35907,Topics in Asset Pricing
-38912,Behavioral Economics
-38914,Foundations of Social Psychology
-40905,Healthcare Operations
-33911,The Economics of Information
-36905,Approximate Dynamic Programming
-38902,Current Topics in Behavioral Science II
-33303,Managing in a Regulated Environment
-38118,Effective Management of Groups and Teams
-35125,Quantimental Investment
-35132,Advanced Models of Option Pricing and Credit Risk
-35211,The Analytics of Financial Crises
-35913,Advanced Theory of Corporate Finance and Capital Markets
-36915,Infinite Dimensional Optimization
-33454,Urban Economics
-33947,Applied Macroeconomics II
-34304,"Cryptocurrency and Blockchain: Markets, Models and Opportunities ⑤"
-37108,Startup Marketing ⑤
-37205,Going to Market: Managing Channel Strategy
-37908,Computational Methods for Marketing and Economics
-42002,Business Policy
-42111,Strategic Investment Decisions ⑤
-35122,Hedge Fund Investing
-41911,Advanced Econometrics
+﻿id,course_number,title
+1,30000,Financial Accounting
+2,30001,Cost Analysis and Internal Controls
+3,30118,Taxes and Business Strategy
+4,30120,"Accounting, Economic, and Regulatory Issues in Complex Deals "
+5,30121,Accounting for Entrepreneurship: From Start-Up through IPO
+6,30130,Financial Statement Analysis
+7,30600,Workshop in Accounting Research
+8,30902,Empirical Research in Accounting
+9,31402,Leadership Practicum
+10,31403,Leadership Studio
+11,32100,Data Analysis with R and Python
+12,33001,Microeconomics
+13,33002,Accelerated Microeconomics
+14,33032,Managing the Workplace
+15,33040,Macroeconomics
+16,33222,Sports Analytics
+17,33305,The Firm and the Non-Market Environment
+18,33314,Big Problems
+19,33403,Advanced Macroeconomics
+20,33451,Real Estate Investments II
+21,33471,"Business, Politics, and Ethics"
+22,33502,International Financial Policy
+23,33610,Applied Economics Workshop
+24,33650,Workshop in Macro and International Economics
+25,33701,Energy Policy Practicum
+26,33905,Microeconomics Reading and Research Seminar ⑤
+27,33923,Advanced Industrial Organization III
+28,33948,Financial Markets in the Macroeconomy
+29,34101,Entrepreneurial Finance and Private Equity
+30,34102,New Venture Strategy
+31,34106,Commercializing Innovation: Tools to Research and Analyze Private Enterprises
+32,34111,Entrepreneurial Selling
+33,34206,"Women As CEOs, Entrepreneurs, Investors, Executives & Directors "
+34,35000,Investments
+35,35120,Portfolio Management
+36,35121,Behavioral Finance
+37,35123,The FinTech Revolution
+38,35130,Fixed Income Asset Pricing
+39,35200,Corporation Finance
+40,35201,Cases in Financial Management
+41,35202,Financial Markets and Institutions
+42,35213,Emerging Markets Finance and Entrepreneurship
+43,35219,Chinese Economy and Financial Markets
+44,35600,Seminar: Finance
+45,35601,Applied Theory Workshop
+46,35901,Portfolio Choice and Asset Pricing 
+47,35906,Behavioral Finance
+48,35916,New Developments in Public Finance
+49,35932,Research Seminar
+50,36106,Managerial Decision Modeling
+51,36109,Advanced Decision Models with Python
+52,36110,Application Development
+53,36111,Application Development II
+54,36600,Workshop in Operations/Management Science
+55,36902,Dynamic Programming/Markov Decision Processes
+56,36913,Online Optimization
+57,37000,Marketing Strategy
+58,37101,Consumer Behavior
+59,37103,Data-Driven Marketing
+60,37202,Pricing Strategies
+61,37601,Marketing Workshop
+62,37903,Adv Mktg Theory: Behavioral Science Approach
+63,37905,Marketing Literature Seminar
+64,37907,Behavioral Science Research Methods in Marketing
+65,38001,Managing in Organizations
+66,38002,Managerial Decision Making
+67,38003,Power and Influence in Organizations
+68,38102,Persuasion II: Influence Through Narrative ⑤
+69,38103,Strategies and Processes of Negotiation
+70,38105,Advanced Negotiations
+71,38601,Workshop in Behavioral Science
+72,38918,Behavioral Economics - Theory & the Lab
+73,38919,Psychology and Social Inequities
+74,39001,Strategy and Structure: Markets and Organizations
+75,40000,Operations Management: Business Process Fundamentals
+76,40108,Revenue Management
+77,41000,Business Statistics
+78,41100,Applied Regression Analysis
+79,41201,Big Data
+80,41202,Analysis of Financial Time Series
+81,41600,Econometrics and Statistics Colloquium
+82,41903,Applied Econometrics
+83,41914,Multivariate Time Series Analysis
+84,42001,Competitive Strategy
+85,42003,Literature and Strategic Leadership ⑤
+86,42004,Literature and Strategic Leadership II ⑤
+87,42116,Game Theory
+88,42117,Platform Competition ⑤
+89,42124,Storytelling and Narratives in Business
+90,42714,Integrated Strategic Management Lab
+91,30116,Accounting and Financial Analysis 
+92,30131,Advanced Financial Analysis and Valuation for Global Firms
+93,30901,Economic Modeling of Accounting Issues
+94,30903,Topics in Empirical Accounting Research
+95,32200,Artificial Intelligence
+96,33112,Business in Historical Perspective
+97,33401,Money and Banking
+98,33450,Real Estate Investments I
+99,33503,Managing the Firm in the Global Economy
+100,33904,Microeconomics Reading and Research Seminar ⑤
+101,33916,Consensus and Economics
+102,33917,Applied Microeconomics in Economic History
+103,33922,Advanced Industrial Organization II
+104,33949,Applied Macroeconomics: Heterogeneity and Macro
+105,34103,Building the New Venture
+106,34113,Impact Investing
+107,34117,Social Entrepreneurship and Innovation
+108,34302,Entrepreneurship through Acquisition
+109,34306,Entrepreneurship through Intellectual Property
+110,34902,Asset Pricing II
+111,34904,Corporate Finance II
+112,35101,"Futures, Forwards, Options & Swaps: Theory and Practice"
+113,35126,Quantitative Portfolio Management
+114,35210,International Corporate Finance
+115,35214,"Debt, Distress, and Restructuring"
+116,35215,Behavioral and Institutional Finance
+117,35931,Research Seminar
+118,36903,Convex Optimization
+119,36912,Stochastic Optimization
+120,36914,Queueing Theory
+121,36917,Networks and Markets
+122,37107,Experimental Marketing
+123,37200,New Products and Services
+124,37304,Digital and Algorithmic Marketing
+125,37902,Foundations of Advanced Quantitative Marketing
+126,37904,Advanced Quantitative Marketing
+127,37906,Applied Bayesian Econometrics
+128,38101,Persuasion: Effective Business Communication ⑤
+129,38119,Designing a Good Life
+130,38120,The Study of Behavioral Economics
+131,38122,Diversity in Organizations
+132,38913,Foundations of Judgment and Decision Making
+133,38917,Topics in Behavioral Economics
+134,39002,Strategic Leadership in Management Networks
+135,39101,Technology Strategy
+136,40101,Supply Chain Strategy and Practice
+137,40110,Managing Service Operations
+138,40205,Healthcare Data Analytics
+139,40910,Supply Chain Foundations & Theory ⑤
+140,41204,Machine Learning
+141,41902,Statistical Inference
+142,42108,Corporate Governance
+143,42121,Merger & Acquisition Strategy
+144,42125,Social Sector Strategy and Structure
+145,42300,Global Health and Social Policy
+146,33101,Advanced Microeconomic Analysis
+147,33310,Employment Law for Entrepreneurs and Managers
+148,33501,International Commercial Policy
+149,33520,The Wealth of Nations
+150,33903,Microeconomics Reading and Research Seminar ⑤
+151,33914,Topics in Information Economics
+152,33921,Advanced Industrial Organization I
+153,33946,International Macroeconomics and Trade
+154,34305,Private Equity Transactions ⑤
+155,34705,Entrepreneurial Discovery
+156,34901,Asset Pricing I
+157,34903,Corporate Finance I
+158,35001,Introductory Finance
+159,35100,Financial Instruments
+160,35930,Research Seminar
+161,36900,Linear Programming
+162,36906,Stochastic Processes
+163,37105,Data Science for Marketing Decision Making
+164,37301,Digital Marketing 
+165,37909,Cognitive Underpinnings of Decisions
+166,38115,Ethics of Business
+167,38116,Leading and Managing Teams
+168,38901,Current Topics in Behavioral Science I
+169,38916,Behavioral Economics - Development & Observational Data
+170,40911,Queueing Models for Service Operations Management ⑤
+171,41203,Financial Econometrics
+172,41301,"Statistical Insight into Marketing, Consulting, and Entrepreneurship"
+173,41901,Probability and Statistics
+174,41910,Time-series Analysis for Forecasting and Model Building
+175,41916,"Bayes, AI and Deep Learning "
+176,42123,"Reputation, Regulation and Communications – How Media Influences Business"
+177,42126,Arts Leadership: Exemplary is Not Enough ⑤
+178,42201,The Legal Infrastructure of Business
+179,42705,"Reputation, Regulation and Communications – How Media Influences Business - Lab"
+180,33113,History of Economic Ideas ⑤
+181,33301,"Management, Unions, and Collective Bargaining"
+182,35131,Cases in Financial Risk Management
+183,40111,Project Management
+184,33915,Market Design
+185,34205,Life Sciences: Innovation and Finance
+186,34207,New Venture Tech ⑤
+187,36911,Networks: Introduction to Modeling and Analysis
+188,36916,Dynamic Control of Stochastic Networks
+189,39600,Workshop in Organizations and Markets
+190,41912,Applied Multivariate Analysis
+191,42704,Integrated Strategic Management ⑤
+192,30906,Contracting on Accounting Information
+193,32901,Applications of Machine Learning to the Empirical Sciences
+194,34108,Innovation Leadership
+195,35907,Topics in Asset Pricing
+196,38912,Behavioral Economics
+197,38914,Foundations of Social Psychology
+198,40905,Healthcare Operations
+199,33911,The Economics of Information
+200,36905,Approximate Dynamic Programming
+201,38902,Current Topics in Behavioral Science II
+202,33303,Managing in a Regulated Environment
+203,38118,Effective Management of Groups and Teams
+204,35125,Quantimental Investment
+205,35132,Advanced Models of Option Pricing and Credit Risk
+206,35211,The Analytics of Financial Crises
+207,35913,Advanced Theory of Corporate Finance and Capital Markets
+208,36915,Infinite Dimensional Optimization
+209,33454,Urban Economics
+210,33947,Applied Macroeconomics II
+211,34304,"Cryptocurrency and Blockchain: Markets, Models and Opportunities ⑤"
+212,37108,Startup Marketing ⑤
+213,37205,Going to Market: Managing Channel Strategy
+214,37908,Computational Methods for Marketing and Economics
+215,42002,Business Policy
+216,42111,Strategic Investment Decisions ⑤
+217,35122,Hedge Fund Investing
+218,41911,Advanced Econometrics

@@ -33,8 +33,9 @@ namespace :slurp do
       sec.title = row["Title"]
       sec.total_seats_offered = row["Total Seats Available"]
       sec.year = row["Year"]
-      sec.course_id = row["Course"]
-      sec.instructor_id = row["Instructor_id"]
+      sec.course_id = row["﻿Course"]
+      puts row["﻿Course"]
+      sec.instructor_id = row["Instructor"]
       sec.save
 
       puts "#{sec.title} created"
@@ -65,7 +66,7 @@ namespace :slurp do
     csv =  CSV.parse(csv_text, :headers => true, :encoding => "ISO-8859-1")
     csv.each do |row|
       course = Course.new
-      course.id = row["id"]
+      course.course_number = row["course_number"]
       course.title = row["title"]
       course.save
 
