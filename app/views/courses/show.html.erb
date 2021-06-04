@@ -131,11 +131,24 @@
             </td>
 
             <td>
-              <%=Section.where({ :course_id => @the_course.id}).average(:phase_4_enrollment).round(2) %>
+              <% if Section.where({ :course_id => @the_course.id})[0] == nil %>
+              <% if Section.where({ :course_id => @the_course.id})[0].phase_4_enrollment == nil %>
+                N/A
+              <% else %>
+                <%=Section.where({ :course_id => @the_course.id}).average(:phase_4_enrollment).round(2) %>
+              <% end %>
+                
+              <% else %>
+                N/A
+              <% end %>
             </td>
 
             <td>
-              <%=Section.where({ :course_id => @the_course.id}).average(:phase_4_price).round(2) %>
+              <% if Section.where({ :course_id => @the_course.id})[0].phase_4_price == nil %>
+                N/A
+              <% else %>
+                <%=Section.where({ :course_id => @the_course.id}).average(:phase_4_price).round(2) %>
+              <% end %>
             </td>
 
             <td>

@@ -1,7 +1,7 @@
 class BackpackedSectionsController < ApplicationController
   before_action(:force_user_sign_in)
   def index
-    matching_backpacked_sections = BackpackedSection.all
+    matching_backpacked_sections = BackpackedSection.where({ :user_id => @current_user.id })
 
     @list_of_backpacked_sections = matching_backpacked_sections.order({ :created_at => :desc })
 
